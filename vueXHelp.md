@@ -162,14 +162,8 @@ methods: {
     ...mapState(['count', 'userInfo'])
   },
   methods: {
-    ..export default {
-  computed: {
-    ...mapState(['count', 'userInfo'])
-  },
-  methods: {
-    ...mapMutations(['signOut', 'setUserInfo']),
+    ...mapActions(['signOut', 'setUserInfo']),
     ...mapMutations(['increment', 'setUserInfo']),
-  }
 };
  ```
   
