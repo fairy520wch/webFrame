@@ -151,7 +151,27 @@ methods: {
 
 通过这些核心概念，Vuex 提供了一种清晰且结构化的方式来管理应用的状态，使得应用的状态变得可预测和可调试。
 
- 
+###  Vuex 提供的辅助函数
+- mapState 将 Vuex store 中的状态映射到组件的计算属性，使得组件可以直接访问状态。
+- mapActions、mapMutations 将 Vuex store 中的 actions 映射到组件的方法，使得组件可以直接分发 actions || mutations。
+
+ ```
+ import { mapState, mapActions, mapMutations } from 'vuex';
+ export default {
+  computed: {
+    ...mapState(['count', 'userInfo'])
+  },
+  methods: {
+    ..export default {
+  computed: {
+    ...mapState(['count', 'userInfo'])
+  },
+  methods: {
+    ...mapMutations(['signOut', 'setUserInfo']),
+    ...mapMutations(['increment', 'setUserInfo']),
+  }
+};
+ ```
   
   
 
